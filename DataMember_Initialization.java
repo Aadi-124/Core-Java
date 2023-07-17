@@ -28,8 +28,22 @@ public class DataMember_Initialization{
 		String s2 = new String(sb);
 		System.out.println(s2);
 
+		String s4 = "StringBuffer Object!AADITYA!";
+
 		String s3 = s2.concat("AADITYA!");
 		System.out.println(s3);
+		System.out.println(s3.length());
+		System.out.println(s3.charAt(3));
+		System.out.println(s3.equals(s4));
+
+		byte b[];
+		b = s3.getBytes();
+		for(int i=0; i<b.length; i++){
+			System.out.print(b[i]+" ");
+		}
+		System.out.println();
+		StringBuffer sb1 = new StringBuffer(5);
+		System.out.println("Capacity = "+sb1.capacity());
 
 	}
 }

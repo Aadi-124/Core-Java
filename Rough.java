@@ -1,21 +1,8 @@
-
-import java.util.*;
-import java.text.NumberFormat;
-
-public class Rough{
+class Rough {
     public static void main(String[] args){
-       
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Currency : ");
-        double amount = sc.nextDouble();
-        NumberFormat f;  
-    
-
-        f = NumberFormat.getCurrencyInstance(Locale.UK);
-        System.out.println(f.format(amount));
-        f = NumberFormat.getCurrencyInstance(Locale.CHINA);
-        System.out.println(f.format(amount));
-       
-    
+        int mask = 0x000F;
+        int value = 0x2222;
+        System.out.println(value & mask);
     }
 }
+// /* This is a // */ */ // comment ***************/
