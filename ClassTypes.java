@@ -3,7 +3,7 @@ import java.util.*;
 public class ClassTypes{
     public static void main(String[] args) {
         
-        //  It is not possible:-
+        // It is not possible:-
         // AbstractClass ac = new AbstractClass();
         
 
