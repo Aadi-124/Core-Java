@@ -1,8 +1,9 @@
-import samplepackage.Sample2;
+import samplepackage.*;
 
 public class Packages {
     public static void main(String[] args) {
-        samplepackage.Sample s = new samplepackage.Sample();
-        s.msg(); 
+        samplepackage.Sample2 S2 = new samplepackage.Sample2();
+        S2.msg();
+
     }
 }
