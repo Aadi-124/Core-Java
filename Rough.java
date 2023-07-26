@@ -5,22 +5,18 @@ import java.util.regex.*;
 public class Rough{
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        Pattern P = Pattern.compile("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*()-+]).{8,30}");
-        int n = sc.nextInt();
-        sc.skip("\\r\\n");
-        while(n>0){
-            String name = sc.nextLine();
-            Matcher M =P.matcher(name);
-            if(M.matches()){
-                System.out.println("Valid");
-            }else{
-                System.out.println("Invalid");
-            }
-            
-            n--;
-        }
-        
+
+       ArrayList<Integer> Arr = new ArrayList<Integer>();
+       for(int i=1;i<=10;i++){
+        Arr.add(i*10);
+       }
+       System.out.println("Arr = "+Arr);
+       for(int i=0; i<Arr.size()/2;i++){
+            int temp = Arr.get(i);
+            Arr.set(i,Arr.get(Arr.size()-i-1));
+            Arr.set(Arr.size()-i-1,temp);
+       }
+       System.out.println("Arr = "+Arr);
         
        
     }

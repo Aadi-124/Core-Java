@@ -3,48 +3,48 @@ import java.io.IOException;
 public class Exceptions {
     public static void main(String[] args) {
 
-        // try {
-        //     // int a = 100;
-        //     // int b = 0;
-        //     // int c = a / b;
-        //     // int[] arr = new int[-2];
-        //     // Sample s = null;
-        //     // s.msg();
-        //     try{
-        //         Sample s = null;
-        //         s.msg();
-        //     } finally{
-        //         System.out.println("HI");
-        //     }
-        //     // if this catch block is unable to handle the exception then the outer catch block that matches this exception will get executed!
-        // } catch (ArithmeticException E) {
-        //     System.out.println("Arithemetic Error!");
-        //     System.out.println(E);
-        // } catch (NegativeArraySizeException E) {
-        //     System.out.println("RANDOM ERROR!");
-        //     System.out.println(E);
-        // } finally{
-        //     System.out.println("This block executed regardless of wheather the error handeled or not!");
-        // }
+        try {
+            // int a = 100;
+            // int b = 0;
+            // int c = a / b;
+            // int[] arr = new int[-2];
+            // Sample s = null;
+            // s.msg();
+            try{
+                Sample s = null;
+                // s.msg();
+            } finally{
+                System.out.println("HI");
+            }
+            // if this catch block is unable to handle the exception then the outer catch block that matches this exception will get executed!
+        } catch (ArithmeticException E) {
+            System.out.println("Arithemetic Error!");
+            System.out.println(E);
+        } catch (NegativeArraySizeException E) {
+            System.out.println("RANDOM ERROR!");
+            System.out.println(E);
+        } finally{
+            System.out.println("This block executed regardless of wheather the error handeled or not!");
+        }
 
 // IMP NOTE --> If we specify the finally block then we can eleminate the catch blocks!
 // Following block of code will successfully executes without throwing an error.
-            // try{
-            //     System.out.println("ASD");
-            // } finally{
-            //     System.out.println("THIsa");
-            // }
+            try{
+                System.out.println("ASD");
+            } finally{
+                System.out.println("THIsa");
+            }
 
 
         // Throwing built exception at user defined condition!
-        // int age = 12;
-        // if(age < 18){
-        //         throw new ArithmeticException("Age must be above 18!");
-        // } 
-        // int age = 12;
-        // if(age < 18){
-        //         throw new UserDefinedException("Age must be above 18!");
-        // } 
+        int age = 12;
+        if(age < 18){
+                throw new ArithmeticException("Age must be above 18!");
+        } 
+        int age2 = 12;
+        if(age2 < 18){
+                throw new UserDefinedException("Age must be above 18!");
+        } 
             Sample s = new Sample();
             s.msg3();
 

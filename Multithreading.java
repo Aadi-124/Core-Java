@@ -16,46 +16,46 @@ public class Multithreading implements Runnable{
     public static void main(String[] args) throws Exception{
 
         
-        // System.out.println("Thread.currentThread().getID() = "+Thread.currentThread().getId());
-        // System.out.println("Thread.currentThread().getName() = "+Thread.currentThread().getName());
-        // System.out.println("Thread.currentThread().getPriority() = "+Thread.currentThread().getPriority());
-        // System.out.println("Thread.currentThread().getState() = "+Thread.currentThread().getState());
-        // System.out.println("Thread.currentThread().NORM_PRIORITY = "+Thread.currentThread().NORM_PRIORITY);
-        // System.out.println("Thread.currentThread().MAX_PRIORITY = "+Thread.currentThread().MAX_PRIORITY);
-        // System.out.println("Thread.currentThread().MIN_PRIORITY = "+Thread.currentThread().MIN_PRIORITY);
+        System.out.println("Thread.currentThread().getID() = "+Thread.currentThread().getId());
+        System.out.println("Thread.currentThread().getName() = "+Thread.currentThread().getName());
+        System.out.println("Thread.currentThread().getPriority() = "+Thread.currentThread().getPriority());
+        System.out.println("Thread.currentThread().getState() = "+Thread.currentThread().getState());
+        System.out.println("Thread.currentThread().NORM_PRIORITY = "+Thread.currentThread().NORM_PRIORITY);
+        System.out.println("Thread.currentThread().MAX_PRIORITY = "+Thread.currentThread().MAX_PRIORITY);
+        System.out.println("Thread.currentThread().MIN_PRIORITY = "+Thread.currentThread().MIN_PRIORITY);
         
-        // Thread.currentThread().setPriority(8);
-        // Thread.currentThread().setName("Aadi Thread!");
-        // // Thread.currentThread().setDaemon(true);
+        Thread.currentThread().setPriority(8);
+        Thread.currentThread().setName("Aadi Thread!");
+        // Thread.currentThread().setDaemon(true);
         
-        // System.out.println("Thread.currentThread().getID() = "+Thread.currentThread().getId());
-        // System.out.println("Thread.currentThread().getName() = "+Thread.currentThread().getName());
-        // System.out.println("Thread.currentThread().getPriority() = "+Thread.currentThread().getPriority());
-        // System.out.println("Thread.currentThread().getState() = "+Thread.currentThread().getState());
-        // System.out.println("Thread.currentThread().NORM_PRIORITY = "+Thread.currentThread().NORM_PRIORITY);
-        // System.out.println("Thread.currentThread().MAX_PRIORITY = "+Thread.currentThread().MAX_PRIORITY);
-        // System.out.println("Thread.currentThread().MIN_PRIORITY = "+Thread.currentThread().MIN_PRIORITY);
+        System.out.println("Thread.currentThread().getID() = "+Thread.currentThread().getId());
+        System.out.println("Thread.currentThread().getName() = "+Thread.currentThread().getName());
+        System.out.println("Thread.currentThread().getPriority() = "+Thread.currentThread().getPriority());
+        System.out.println("Thread.currentThread().getState() = "+Thread.currentThread().getState());
+        System.out.println("Thread.currentThread().NORM_PRIORITY = "+Thread.currentThread().NORM_PRIORITY);
+        System.out.println("Thread.currentThread().MAX_PRIORITY = "+Thread.currentThread().MAX_PRIORITY);
+        System.out.println("Thread.currentThread().MIN_PRIORITY = "+Thread.currentThread().MIN_PRIORITY);
         
 
-        // SecondThread ST = new SecondThread();
-        // ST.start();
+        SecondThread ST = new SecondThread();
+        ST.start();
 
-        // FirstThread FT = new FirstThread();
-        // ShutDown SD = new ShutDown();
-        // Runtime R = Runtime.getRuntime();
-        // R.addShutdownHook(SD);
-        // R.addShutdownHook(FT);
+        FirstThread FT = new FirstThread();
+        ShutDown SD = new ShutDown();
+        Runtime R = Runtime.getRuntime();
+        R.addShutdownHook(SD);
+        R.addShutdownHook(FT);
         
-        // FirstThread FT = new FirstThread();
-        // SecondThread ST = new SecondThread();
-        // State S = new State(FT,ST);
-        // S.start();
-        // FT.start();
-        // ST.start();
-        // FT.join();
-        // System.out.println("FT prioprity = "+FT.getPriority());
-        // System.out.println("ST prioprity = "+ST.getPriority());
-        // System.out.println("This is the last line of the program!");
+        FirstThread FT2 = new FirstThread();
+        SecondThread ST2 = new SecondThread();
+        State S = new State(FT2,ST2);
+        S.start();
+        FT2.start();
+        ST2.start();
+        FT2.join();
+        System.out.println("FT prioprity = "+FT2.getPriority());
+        System.out.println("ST prioprity = "+ST2.getPriority());
+        System.out.println("This is the last line of the program!");
 
 
 
