@@ -48,12 +48,14 @@ final class Base1 {
 
 }
 
-class Derived2 extends Base1 {
 
-    public Derived2(){
-        System.out.println("Derived2!");
-    }
+// Following extends are not permitted!
+// class Derived2 extends Base1 {
+// 
+//   public Derived2(){
+//         System.out.println("Derived2!");
+//     }
 
-}
+// }
 
 
