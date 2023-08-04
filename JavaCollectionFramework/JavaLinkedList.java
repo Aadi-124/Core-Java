@@ -3,7 +3,9 @@ import java.util.*;
 
 public class JavaLinkedList {
     public static void main(String[] args) {
-    
+
+        
+
         LinkedList<Integer> ll = new LinkedList<Integer>();  
         LinkedList<Integer> ll2 = new LinkedList<Integer>();
         ll2.add(9999);
@@ -59,8 +61,6 @@ public class JavaLinkedList {
         System.out.println();
         System.out.println("ll.size() = "+ll.size());
         
-
-
     }   
 }
 

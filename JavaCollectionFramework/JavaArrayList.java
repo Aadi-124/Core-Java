@@ -1,4 +1,4 @@
-package JavaCollectionFramework;
+
 import java.util.*;
 
 public class JavaArrayList {
@@ -35,7 +35,7 @@ public class JavaArrayList {
         Collections.sort(Arr);
         System.out.println("Arr.sort() = "+Arr);
       
-        Iterator itr = Arr.iterator();
+        Iterator<Integer> itr = Arr.iterator();
         System.out.println("Iteration using iterator:- ");
         while(itr.hasNext()){
             System.out.print(" "+itr.next());
